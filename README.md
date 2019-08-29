@@ -70,7 +70,7 @@ class SecondViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     @IBAction func passDataButtonTapped(_ sender: Any) {
-        delegate?.finishPassingData(string: "Send from SecondViewController")
+        delegate?.finishPassingData(string: "Send from SecondViewController to FirstViewController")
     }
 
 }
