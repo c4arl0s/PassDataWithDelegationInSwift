@@ -36,7 +36,7 @@ class ViewController: UIViewController, PassDataDelegate {
     performSegue(withIdentifier: "goToSecondViewController", sender: nil)
     }
     func finishPassingData(string: String) {
-        print("notified from first ViewController")
+        print(string);
     }
 }
 ```
