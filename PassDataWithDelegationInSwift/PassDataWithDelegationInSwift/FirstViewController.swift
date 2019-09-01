@@ -9,6 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController, PassDataDelegate {
+    @IBOutlet weak var textViewFromSecondViewController: UITextView!
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // find out why you have to prepare for segue!
@@ -20,6 +21,7 @@ class ViewController: UIViewController, PassDataDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,7 +31,12 @@ class ViewController: UIViewController, PassDataDelegate {
     performSegue(withIdentifier: "goToSecondViewController", sender: nil)
     }
     func finishPassingData(string: String) {
-        print("notified from first ViewController")
+        print(string);
+        //textViewFromSecondViewController.text = textViewFromSecondViewController.text + string
+        let date = Date()
+        print("at \(date)", date)
+        textViewFromSecondViewController.text.append(string + "\(date)")
+        
     }
 }
 
