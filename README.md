@@ -18,7 +18,7 @@ protocol PassDataDelegate {
 ``` swift
  var delegate: PassDataDelegate?
  ```
-3. Adopt and implement the protocol.
+3. Adopt, implement the protocol and set the delegate somewhere. It could be on target action method in this case.
 
 ``` swift
 class ViewController: UIViewController, PassDataDelegate {
