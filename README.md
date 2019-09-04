@@ -22,11 +22,32 @@ protocol PassDataDelegate {
 
 ``` swift
 class ViewController: UIViewController, PassDataDelegate {
- .
- .
- .
+    @IBOutlet weak var textViewFromSecondViewController: UITextView!
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? SecondViewController {
+            destination.delegate = self
+        }
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    @IBAction func performSegueButtonTapped(_ sender: Any) {
+    performSegue(withIdentifier: "goToSecondViewController", sender: nil)
+    }
+    
     func finishPassingData(string: String) {
-        print(string);
+        print(string)
+        let date = Date()
+        print("at \(date)", date)
+        textViewFromSecondViewController.text.append(string + "\(date)")
+        
     }
 }
 ```
