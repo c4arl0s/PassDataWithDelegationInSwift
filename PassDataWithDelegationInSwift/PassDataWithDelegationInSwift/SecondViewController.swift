@@ -8,12 +8,12 @@
 
 import UIKit
 
-protocol PassDataDelegate {
-    func finishPassingData(string: String)
+protocol SecondViewControllerDelegate {
+    func didTappedButton(message: String)
 }
 
 class SecondViewController: UIViewController {
-    var delegate: PassDataDelegate?
+    var delegate: SecondViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +24,7 @@ class SecondViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     @IBAction func passDataButtonTapped(_ sender: Any) {
-        delegate?.finishPassingData(string: "Sent from SecondViewController to FirstViewController")
+        delegate?.didTappedButton(message: "Sent from SecondViewController to FirstViewController")
     }
 
 }

@@ -8,14 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController, PassDataDelegate {
+class ViewController: UIViewController, SecondViewControllerDelegate {
     @IBOutlet weak var textViewFromSecondViewController: UITextView!
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // find out why you have to prepare for segue!
-        if let destination = segue.destination as? SecondViewController {
         // find ouy why you have to delegate until here
         // oh! remember the example seen into appRewiewController code
+        if let destination = segue.destination as? SecondViewController {
             destination.delegate = self
         }
     }
@@ -30,12 +30,11 @@ class ViewController: UIViewController, PassDataDelegate {
     @IBAction func performSegueButtonTapped(_ sender: Any) {
     performSegue(withIdentifier: "goToSecondViewController", sender: nil)
     }
-    func finishPassingData(string: String) {
-        print(string);
-        //textViewFromSecondViewController.text = textViewFromSecondViewController.text + string
+    func didTappedButton(message: String) {
+        print(message)
         let date = Date()
         print("at \(date)", date)
-        textViewFromSecondViewController.text.append(string + "\(date)")
+        textViewFromSecondViewController.text.append(message + "\(date)")
         
     }
 }
