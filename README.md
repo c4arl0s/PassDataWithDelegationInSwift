@@ -4,7 +4,7 @@ PassDataWithDelegationInSwift
 
 # Steps to Delegation
 
-1. Create a delegate protocol
+# 1. Create a delegate protocol
 
 ``` swift
 protocol PassDataDelegate {
@@ -13,12 +13,12 @@ protocol PassDataDelegate {
 ```
 
 
-2. Create a delegate property
+# 2. Create a delegate property
 
 ``` swift
  var delegate: PassDataDelegate?
  ```
-3. Adopt, implement the protocol and set the delegate somewhere. It could be on target action method in this case.
+# 3. Adopt, implement the protocol and set the delegate somewhere. It could be on target action method in this case.
 
 ``` swift
 class ViewController: UIViewController, PassDataDelegate {
@@ -31,7 +31,7 @@ class ViewController: UIViewController, PassDataDelegate {
 }
 ```
 
-4. Call the delegate.
+# 4. Call the delegate.
 
 ``` swift
  @IBAction func passDataButtonTapped(_ sender: Any) {
