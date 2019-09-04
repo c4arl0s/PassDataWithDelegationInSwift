@@ -33,6 +33,17 @@ class ViewController: UIViewController, PassDataDelegate {
 
 4. Call the delegate.
 
+``` swift
+override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // find out why you have to prepare for segue!
+        if let destination = segue.destination as? SecondViewController {
+        // find ouy why you have to delegate until here
+        // oh! remember the example seen into appRewiewController code
+            destination.delegate = self
+        }
+    }
+```
+
 # ViewController.swift
 
 ``` swift
