@@ -145,6 +145,4 @@ class SecondViewController: UIViewController {
 }
 ```
 
-![Screen Shot 2019-08-28 at 11 33 59 PM](https://user-images.githubusercontent.com/24994818/63910453-59f1e280-c9ec-11e9-9f61-ffee047abc0e.png)
-![Screen Shot 2019-08-28 at 11 34 04 PM](https://user-images.githubusercontent.com/24994818/63910456-5bbba600-c9ec-11e9-8b26-ba890919ca91.png)
 
