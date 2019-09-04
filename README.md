@@ -14,6 +14,10 @@ protocol PassDataDelegate {
 
 
 2. Create a delegate property
+
+``` swift
+ var delegate: PassDataDelegate?
+ ```
 3. Adopt and implement the protocol.
 4. Call the delegate.
 
