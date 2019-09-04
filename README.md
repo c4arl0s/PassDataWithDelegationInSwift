@@ -19,6 +19,18 @@ protocol PassDataDelegate {
  var delegate: PassDataDelegate?
  ```
 3. Adopt and implement the protocol.
+
+``` swift
+class ViewController: UIViewController, PassDataDelegate {
+ .
+ .
+ .
+    func finishPassingData(string: String) {
+        print(string);
+    }
+}
+```
+
 4. Call the delegate.
 
 # ViewController.swift
