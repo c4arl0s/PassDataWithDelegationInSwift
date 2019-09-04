@@ -8,7 +8,7 @@ PassDataWithDelegationInSwift
 
 ``` swift
 protocol SecondViewControllerDelegate {
-    func didTappedButton(message: String)
+    func didTappedPassDataButton(message: String)
 }
 ```
 
@@ -43,7 +43,7 @@ class ViewController: UIViewController, SecondViewControllerDelegate {
     @IBAction func performSegueButtonTapped(_ sender: Any) {
     performSegue(withIdentifier: "goToSecondViewController", sender: nil)
     }
-    func didTappedButton(message: String) {
+    func didTappedPassDataButton(message: String) {
         print(message)
         let date = Date()
         print("at \(date)", date)
@@ -57,7 +57,7 @@ class ViewController: UIViewController, SecondViewControllerDelegate {
 
 ``` swift
 @IBAction func passDataButtonTapped(_ sender: Any) {
-        delegate?.didTappedButton(message: "Sent from SecondViewController to FirstViewController")
+        delegate?.didTappedPassDataButton(message: "Sent from SecondViewController to FirstViewController")
     }
 ```
 
@@ -98,7 +98,7 @@ class ViewController: UIViewController, SecondViewControllerDelegate {
     @IBAction func performSegueButtonTapped(_ sender: Any) {
     performSegue(withIdentifier: "goToSecondViewController", sender: nil)
     }
-    func didTappedButton(message: String) {
+    func didTappedPassDataButton(message: String) {
         print(message)
         let date = Date()
         print("at \(date)", date)
@@ -106,8 +106,6 @@ class ViewController: UIViewController, SecondViewControllerDelegate {
         
     }
 }
-
-
 ```
 
 # SecondViewController.swift
@@ -124,7 +122,7 @@ class ViewController: UIViewController, SecondViewControllerDelegate {
 import UIKit
 
 protocol SecondViewControllerDelegate {
-    func didTappedButton(message: String)
+    func didTappedPassDataButton(message: String)
 }
 
 class SecondViewController: UIViewController {
@@ -139,10 +137,11 @@ class SecondViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     @IBAction func passDataButtonTapped(_ sender: Any) {
-        delegate?.didTappedButton(message: "Sent from SecondViewController to FirstViewController")
+        delegate?.didTappedPassDataButton(message: "Sent from SecondViewController to FirstViewController")
     }
 
 }
+
 ```
 
 ![Screen Shot 2019-09-03 at 9 35 34 PM](https://user-images.githubusercontent.com/24994818/64221528-cfe5c600-ce92-11e9-9b87-d91ede041904.png)
