@@ -5,6 +5,14 @@ PassDataWithDelegationInSwift
 # Steps to Delegation
 
 1. Create a delegate protocol
+
+``` swift
+protocol PassDataDelegate {
+    func finishPassingData(string: String)
+}
+```
+
+
 2. Create a delegate property
 3. Adopt and implement the protocol.
 4. Call the delegate.
