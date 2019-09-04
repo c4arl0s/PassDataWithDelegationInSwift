@@ -44,6 +44,8 @@ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     }
 ```
 
+![Screen Shot 2019-09-03 at 9 08 07 PM](https://user-images.githubusercontent.com/24994818/64220434-0c172780-ce8f-11e9-83ea-c89fc3f754ed.png)
+
 # ViewController.swift
 
 ``` swift
